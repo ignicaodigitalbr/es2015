@@ -259,3 +259,21 @@ const FOO = true; // Uncaught SyntaxError: Identifier 'FOO' has already been dec
 
 const BAR; // Uncaught SyntaxError: Missing initializer in const declaration
 ```
+
+## Modules
+
+```javascript
+// math.js
+const math = {
+  sum: x => x + 1,
+  awesomeSum: (x, y) => x + y
+};
+
+export default math;
+
+// main.js
+import math from 'math';
+
+console.log(math.sum(3)) // 4
+console.log(math.awesomeSum(3, 3)) // 5
+```
