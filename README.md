@@ -73,6 +73,7 @@ function Count() {
 
   setInterval(function () {
     this.sum(); // Uncaught TypeError: this.sum is not a function
+    console.log(this.time);
   }, 1000);
 }
 
@@ -87,7 +88,7 @@ function Count() {
   this.time = 0;
 
   setInterval(() => {
-    this.sum();
+    this.sum(); // No error :)
     console.log(this.time);
   }, 1000);
 }
@@ -218,6 +219,11 @@ IGD!!`);
 // Hello
 // IGD!!
 
+// ES5
+var product = 'Klickpages';
+console.log(product + ' is awesome!'); // Klickpages is awesome!
+
+// ES2015
 const product = 'Klickpages';
 console.log(`${product} is awesome!`); // Klickpages is awesome!
 ```
