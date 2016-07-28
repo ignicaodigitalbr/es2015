@@ -15,6 +15,54 @@ const complexOperation = (x, y) => {
 
   return x + y;
 }
+
+// ES5
+var avengers = [
+  { name: 'Iron Man', damage: 500 },
+  { name: 'Thor', damage: 300 },
+  { name: 'Hulk', damage: 400 },
+  { name: 'Captain America', damage: 250 },
+  { name: 'Black Widow', damage: 350 },
+  { name: 'Hawkeye', damage: 320 }
+];
+
+var powerfulFilter = function(avenger) {
+  return avenger.damage > 300;
+};
+var damageCollection = function(avenger) {
+  return avenger.damage;
+};
+var calcDamage = function(sum, damage) {
+  sum + damage;
+};
+
+var totalDamage = avengers
+  .filter(powerfulFilter)
+  .map(damageCollection)
+  .reduce(calcDamage);
+
+console.log(totalDamage);
+
+// ES2015
+const avengers = [
+  { name: 'Iron Man', damage: 500 },
+  { name: 'Thor', damage: 300 },
+  { name: 'Hulk', damage: 400 },
+  { name: 'Captain America', damage: 250 },
+  { name: 'Black Widow', damage: 350 },
+  { name: 'Hawkeye', damage: 320 }
+];
+
+const powerfulFilter = avenger => avenger.damage > 300;
+const damageCollection = avenger => avenger.damage;
+const calcDamage = (sum, damage) => sum + damage;
+
+const totalDamage = avengers
+  .filter(powerfulFilter)
+  .map(damageCollection)
+  .reduce(calcDamage);
+
+console.log(totalDamage);
 ```
 
 ### This
