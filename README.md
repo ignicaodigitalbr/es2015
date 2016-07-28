@@ -208,3 +208,16 @@ class Hero extends Person {
 const tony = new Hero('Tony Stark', 'Iron Man');
 tony.whoIs(); // Tony Stark is Iron Man
 ```
+
+## Template Strings
+
+```javascript
+console.log(`Hello IGD!!`); // Hello IGD!!
+console.log(`Hello
+IGD!!`);
+// Hello
+// IGD!!
+
+const product = 'Klickpages';
+console.log(`${product} is awesome!`); // Klickpages is awesome!
+```
