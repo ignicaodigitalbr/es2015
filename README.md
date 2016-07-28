@@ -277,3 +277,17 @@ import math from 'math';
 console.log(math.sum(3)) // 4
 console.log(math.awesomeSum(3, 3)) // 5
 ```
+
+## Promises
+```javascript
+const timer = (name) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(`${name} is awesome!`);
+    }, 1000);
+  });
+};
+
+timer('Klickpages')
+  .then(data => console.log(data), error => console.error(error));
+```
