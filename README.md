@@ -221,3 +221,41 @@ IGD!!`);
 const product = 'Klickpages';
 console.log(`${product} is awesome!`); // Klickpages is awesome!
 ```
+
+## let and const
+
+### let
+```javascript
+// ES5
+console.log(foo); // undefined
+if (true) {
+  var foo = true;
+  console.log(foo); // true
+}
+console.log(foo); // true
+
+// ES2015
+console.log(foo); // Uncaught ReferenceError: foo is not defined
+if (true) {
+  let foo = true;
+  console.log(foo);
+}
+
+if (true) {
+  let bar = true;
+  console.log(bar); // true
+}
+console.log(bar); // Uncaught ReferenceError: foo is not defined
+```
+
+### const
+```javascript
+const FOO = true;
+console.log(FOO); // true
+
+FOO = false // Uncaught TypeError: Assignment to constant variable.
+
+const FOO = true; // Uncaught SyntaxError: Identifier 'FOO' has already been declared
+
+const BAR; // Uncaught SyntaxError: Missing initializer in const declaration
+```
